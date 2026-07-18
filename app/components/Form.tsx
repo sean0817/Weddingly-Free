@@ -129,7 +129,7 @@ const Form = () => {
           className="block w-full p-2 text-sm font-medium text-center text-black bg-white border border-transparent rounded-md shadow-sm"
           disabled={loading} 
         >
-          {loading ? "Submitting..." : "Submit"} 
+          {loading ? "提交中..." : "提交"} 
         </button>
       </div>
     </form>

@@ -57,9 +57,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
   
 
   
-const { ref: slide4Ref, inView: isSlide4InView } = useInView({
-  threshold: 0.5,
-});
+
   
 
  
@@ -173,77 +171,7 @@ const { ref: slide4Ref, inView: isSlide4InView } = useInView({
         {isOpen && (
           <>
     
-            {/* Slide 4 */}
-            <div
-              className="snap-start  text-white h-screen pt-8 flex px-12 "
-              style={{
-                backgroundImage: `url(/slide_4.jpg)`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }}
-            >
-              <div>
-                <h1
-                  ref={slide4Ref}
-                  className={`text-xl md:text-5xl  text-white font-ovo fadeInMove ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  A journey in love
-                </h1>
-                <h3
-                  ref={slide4Ref}
-                  className={`uppercase font-legan text-xl mt-5 mb-2 fadeInMoveSlow ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  {config.timeline_1}
-                </h3>
-                <p
-                  ref={slide4Ref}
-                  className={`text-xs font-legan text-white fadeInLeftSlow ${isSlide4InView ? "active" : ""
-                    }`}
-                >
-                  {config.timeline_1_content}
-                </p>
-                <h3
-                  ref={slide4Ref}
-                  className={`uppercase font-legan text-xl mt-5 mb-2 fadeInMoveSlow ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  {config.timeline_2}
-                </h3>
-                <p
-                  ref={slide4Ref}
-                  className={`text-xs font-legan text-white fadeInLeftSlow ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  {config.timeline_2_content}
-                </p>
-                <h3
-                  ref={slide4Ref}
-                  className={`uppercase font-legan text-xl mt-5 mb-2 fadeInMoveSlow ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  {config.timeline_3}
-                </h3>
-                <p
-                  ref={slide4Ref}
-                  className={`text-xs font-legan text-white fadeInLeftSlow ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  {config.timeline_3_content}
-                </p>
-                <div
-                  ref={slide4Ref}
-                  className={`relative flex items-center mt-5 fadeInLeft ${isSlide4InView ? " active" : ""
-                    }`}
-                >
-                  <hr className="w-[120px] mx-2 border-t border-gray-300" />
-                  <span className="px-2 font-thesignature text-3xl">
-                    {config.coupleNames}
-                  </span>
-                </div>
-              </div>
-            </div>
+
             {/* Slide 5 */}
             <div
               className="snap-start  text-white h-screen flex flex-col items-center px-12 "
