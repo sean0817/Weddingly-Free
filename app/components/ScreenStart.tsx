@@ -16,11 +16,11 @@ const ScreenStart = () => {
     
     const fadeOutTimer = setTimeout(() => {
       setFadeClass("opacity-0");
-    }, 3000); 
+    }, 5000); 
 
     const removeScreenStart = setTimeout(() => {
       setShowScreenStart(false);
-    }, 3000);
+    }, 4000);
 
     return () => {
       clearTimeout(fadeInTimer);
