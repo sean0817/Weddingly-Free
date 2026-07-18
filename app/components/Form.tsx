@@ -22,7 +22,7 @@ const Form = () => {
     };
 
 
-    if (!data.name || !data.attendance || !data.guests || !data.message) {
+    if (!data.name || !data.attendance || !data.guests ) {
       alert("All fields are required!");
       setLoading(false); 
       return;
@@ -39,9 +39,9 @@ const Form = () => {
     if (response.ok) {
       // Reset the form if submission is successful
       form.reset();
-      alert("RSVP submitted successfully!");
+      alert("收到啦！期待婚礼当天与您相聚！");
     } else {
-      alert("Failed to submit RSVP");
+      alert("提交好像出了点小状况，请稍后再试一次哦～");
     }
 
     setLoading(false); // Set loading to false after response
@@ -52,7 +52,7 @@ const Form = () => {
       {/* Form fields */}
       <div>
         <label htmlFor="name" className="block text-sm font-medium text-white">
-          Nama
+          姓名
         </label>
         <input
           type="text"
@@ -68,7 +68,7 @@ const Form = () => {
           htmlFor="attendance"
           className="block text-sm font-medium text-white"
         >
-          Kehadiran
+          是否出席
         </label>
         <select
           id="attendance"
@@ -76,9 +76,9 @@ const Form = () => {
           className="block w-full p-2 mt-1 bg-black/40 text-white border border-gray-300 rounded-md shadow-sm  sm:text-sm"
           required
         >
-          <option value="">Pilih Kehadiran</option>
-          <option value="Hadir">Hadir</option>
-          <option value="Tidak Hadir">Tidak Hadir</option>
+          
+          <option value="Hadir">我/我们会准时出席，非常期待！</option>
+          <option value="Tidak Hadir">很遗憾无法到场，祝新婚快乐！</option>
         </select>
       </div>
 
@@ -87,7 +87,7 @@ const Form = () => {
           htmlFor="guests"
           className="block text-sm font-medium text-white"
         >
-          Jumlah Tamu
+          出席人数
         </label>
         <select
           id="guests"
@@ -95,11 +95,15 @@ const Form = () => {
           className="block w-full p-2 mt-1  bg-black/40 text-white border border-gray-300 rounded-md shadow-sm  sm:text-sm"
           required
         >
-          <option value="">Pilih Jumlah Tamu</option>
+          
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
         </select>
       </div>
 
@@ -108,14 +112,14 @@ const Form = () => {
           htmlFor="message"
           className="block text-sm font-medium text-white"
         >
-          Ucapan
+          留言
         </label>
         <textarea
           id="message"
           name="message"
           rows={4}
           className="block w-full p-2 mt-1 bg-white/10 text-white border border-gray-300 rounded-md shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
-          required
+          
         />
       </div>
 

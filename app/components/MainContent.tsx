@@ -130,11 +130,12 @@ const { ref: slide4Ref, inView: isSlide4InView } = useInView({
                 The Wedding Of
               </h5>
               <h1
-                className={`text-2xl md:text-3xl font-ovo t text-white uppercase fadeMain ${isMainInView ? "active" : ""
+                className={`text-3xl md:text-5xl font-thesignature text-white fadeMain ${isMainInView ? "active" : ""
                   } `}
                 ref={mainRef}
               >
                 {config.coupleNames}
+                
               </h1>
               <h5
                 className={`text-sm  font-legan text-white uppercase tracking-wide  fadeMain2 ${isMain2InView ? "active" : ""
@@ -151,14 +152,14 @@ const { ref: slide4Ref, inView: isSlide4InView } = useInView({
             </div>
             <div>
               <p className="mt-5 text-lg uppercase font-xs tracking-widest text-white">
-                {name ? `Dear ${name},` : "Welcome"}
+                {name ? `亲爱的 ${name},` : "您被邀请了！"}
               </p>
               {!isOpen ? (
                 <button
                   className="animate-bounce  mt-5 px-5 py-1 uppercase text-xs border border-white hover:text-white hover:bg-transparent rounded-full bg-white text-black transition"
                   onClick={handleOpen}
                 >
-                  Open Invitation
+                  点击开启邀请函
                 </button>
               ) : (
                 <IoIosArrowUp
@@ -404,7 +405,7 @@ const { ref: slide4Ref, inView: isSlide4InView } = useInView({
                 className={`${isSlide9InView ? "active" : ""} fadeInMove`}
               >
                 <h1 className="text-3xl text-white font-ovo text-center uppercase">
-                  RSVP AND WISHES
+                  您的莅临，我们的荣幸
                 </h1>
                 <p className="text-sm font-legan text-white/80 text-center">
                 {config.rsvp.detail}
@@ -419,7 +420,7 @@ const { ref: slide4Ref, inView: isSlide4InView } = useInView({
             <div
               className="snap-start text-white h-screen flex flex-col justify-center pt-16 pb-16 px-8"
               style={{
-                backgroundImage: `url(/slide_9.jpg)`,
+                backgroundImage: `url(/slide_10.jpg)`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
