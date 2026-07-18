@@ -15,11 +15,11 @@ const wishSchema = new Schema(
       type: Number,
       required: true,
       min: 1,
-      max: 4,
+      max: 8,
     },
     message: {
       type: String,
-      required: true,
+      required: false,
     },
   },
   { timestamps: true }
