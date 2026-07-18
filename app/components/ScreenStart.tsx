@@ -11,21 +11,10 @@ const ScreenStart = () => {
   useEffect(() => {
     const fadeInTimer = setTimeout(() => {
       setFadeClass("opacity-100");
-    }, 100); 
-
-    
-    const fadeOutTimer = setTimeout(() => {
-      setFadeClass("opacity-0");
-    }, 3500); 
-
-    const removeScreenStart = setTimeout(() => {
-      setShowScreenStart(false);
-    }, 4500);
+    }, 100);
 
     return () => {
       clearTimeout(fadeInTimer);
-      clearTimeout(fadeOutTimer);
-      clearTimeout(removeScreenStart);
     };
   }, []);
 
@@ -40,18 +29,22 @@ const ScreenStart = () => {
       <TypeAnimation
         sequence={[
           "THE WEDDING OF",
-          2000, 
-          config.coupleNames.toUpperCase(),
           1000,
+          config.coupleNames.toUpperCase(),
+          500,
+          () => {
+            setFadeClass("opacity-0");
+            setTimeout(() => setShowScreenStart(false), 1000);
+          },
         ]}
         wrapper="span"
-        speed={20}
+        speed={35}
         style={{
           fontSize: "2em",
           display: "inline-block",
         }}
         className="font-legan text-sm"
-        repeat={0} // Animasi terus diulang
+        repeat={0}
       />
     </div>
   );
