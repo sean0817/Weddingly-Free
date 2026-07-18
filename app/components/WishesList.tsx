@@ -66,7 +66,7 @@ const WishesList = () => {
 
       <div className="max-h-[500px] overflow-y-auto">
         {wishes.length === 0 ? (
-          <p>No wishes available</p>
+          <p>暂无祝福留言</p>
         ) : (
           wishes.map((wish) => (
             <div key={wish._id} className="mb-4">
@@ -95,10 +95,10 @@ const WishesList = () => {
           }`}
           disabled={page === 1}
         >
-          Sebelumnya
+          上一页
         </button>
         <p className="text-xs">
-          Page {page} of {totalPages}
+          第 {page} 页，共 {totalPages} 页
         </p>
         <button
           onClick={handleNextPage}
@@ -107,7 +107,7 @@ const WishesList = () => {
           }`}
           disabled={page === totalPages}
         >
-          Selanjutnya
+          下一页
         </button>
       </div>
     </div>
