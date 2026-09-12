@@ -36,15 +36,18 @@ const Form = () => {
       body: JSON.stringify(data),
     });
 
-    if (response.ok) {
-      // Reset the form if submission is successful
-      form.reset();
-      setAttendance("");
-      alert("收到啦！谢谢！");
-    } else {
-      alert("提交好像出了点小状况，请稍后再试一次哦~");
-    }
-
+if (response.ok) {
+  // Reset the form if submission is successful
+  if (attendance === "Hadir") {
+    alert("收到啦！期待婚礼当天与您相聚！");
+  } else {
+    alert("没关系，期待下一次见面！");
+  }
+  form.reset();
+  setAttendance("");
+} else {
+  alert("提交好像出了点小状况，请稍后再试一次哦～");
+}
     setLoading(false); // Set loading to false after response
   };
 
