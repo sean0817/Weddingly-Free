@@ -362,7 +362,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                 className={`${isSlide10InView ? "active" : ""} fadeInMove`}
               >
                 <h1 className="text-3xl text-white font-ovo text-center uppercase">
-                  祝福留言
+                  祝福留言 💌
                 </h1>
                 <WishesList />
               </div>
