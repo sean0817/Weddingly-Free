@@ -40,9 +40,9 @@ const Form = () => {
       // Reset the form if submission is successful
       form.reset();
       setAttendance("");
-      alert("收到啦！期待婚礼当天与您相聚！");
+      alert("收到啦！谢谢！");
     } else {
-      alert("提交好像出了点小状况，请稍后再试一次哦～");
+      alert("提交好像出了点小状况，请稍后再试一次哦~");
     }
 
     setLoading(false); // Set loading to false after response
