@@ -169,7 +169,7 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
           </div>
         </div>
         {isOpen && (
-          <>
+          <>  
     
 
             {/* Slide 5 */}
@@ -216,23 +216,27 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
                   </div>
                 )}
 
-                {config.weddingReception.enabled && (
-                  <div className="mt-5 mx-auto flex  flex-col items-center">
-                    <h3 className="uppercase font-ovo text-sm text-center mt-5 mb-2">
-                      婚礼晚宴 <br /> {config.weddingReception.time}
-                    </h3>
-                    <p className="text-sm text-center  font-legan text-white">
-                      {config.weddingReception.place} <br /> {config.weddingReception.place_details}
-                    </p>
-                    <Link
-                      href={config.weddingReception.googleMapsLink}
-                      target="_blank"
-                      className="cursor-pointer hover:text-white/20 text-sm rounded-full flex items-center gap-x-2 text-center font-legan mt-5 bg-[#808080] w-fit px-4 py-2 text-white"
-                    >
-                      Google Maps
-                    </Link>
-                  </div>
-                )}
+{config.weddingReception.enabled && (
+  <div className="mt-5 mx-auto flex  flex-col items-center">
+    <h3 className="uppercase font-ovo text-sm text-center mt-5 mb-2">
+      婚礼晚宴 
+    </h3>
+    <div className="text-sm text-center font-legan text-white mt-3 space-y-1">
+      <p>18:00 · Photobooth 拍照环节 📸</p>
+      <p>19:00 · 开席 🍽️ </p>
+    </div>
+    <p className="text-sm text-center  font-legan text-white mt-3">
+      {config.weddingReception.place} <br /> {config.weddingReception.place_details}
+    </p>
+    <Link
+      href={config.weddingReception.googleMapsLink}
+      target="_blank"
+      className="cursor-pointer hover:text-white/20 text-sm rounded-full flex items-center gap-x-2 text-center font-legan mt-5 bg-[#808080] w-fit px-4 py-2 text-white"
+    >
+      Google Maps
+    </Link>
+  </div>
+)}
               </div>
             </div>
             {/* Slide 7 */}

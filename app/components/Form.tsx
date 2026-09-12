@@ -39,9 +39,9 @@ const Form = () => {
 if (response.ok) {
   // Reset the form if submission is successful
   if (attendance === "Hadir") {
-    alert("收到啦！期待婚礼当天与您相聚！");
+    alert("收到啦！期待婚礼当天与您相聚！🌹");
   } else {
-    alert("没关系，期待下一次见面！");
+    alert("没关系，期待下一次见面！🥂 ");
   }
   form.reset();
   setAttendance("");
