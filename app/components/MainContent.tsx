@@ -218,14 +218,14 @@ const WeddingScreen = ({ name }: WeddingScreenProps) => {
 
 {config.weddingReception.enabled && (
   <div className="mt-5 mx-auto flex  flex-col items-center">
-    <h3 className="uppercase font-ovo text-sm text-center mt-5 mb-2">
+    <h3 className="uppercase font-ovo text-base text-center mt-5 mb-2">
       婚礼晚宴 
     </h3>
-    <div className="text-sm text-center font-legan text-white mt-3 space-y-1">
+    <div className="text-base text-center font-legan text-white mt-3 space-y-1">
       <p>18:00 · Photobooth 拍照环节 📸</p>
       <p>19:00 · 开席 🍽️ </p>
     </div>
-    <p className="text-sm text-center  font-legan text-white mt-3">
+    <p className="text-base text-center  font-legan text-white mt-3">
       {config.weddingReception.place} <br /> {config.weddingReception.place_details}
     </p>
     <Link
