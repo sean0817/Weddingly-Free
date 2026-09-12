@@ -15,7 +15,7 @@ const wishSchema = new Schema(
       type: Number,
       required: true,
       min: 1,
-      max: 8,
+      max: 10,
     },
     message: {
       type: String,
@@ -27,3 +27,4 @@ const wishSchema = new Schema(
 
 export const Wish = models.Wish || mongoose.model("Wish", wishSchema);
 export default Wish;
+  
