@@ -70,6 +70,7 @@ const WishesList = () => {
         ) : (
           wishes.map((wish) => (
             <div key={wish._id} className="mb-4">
+              <p className="font-bold font-legan">{wish.name}</p>
               <p className="text-sm">{wish.message}</p>
               <hr className="my-2 border-gray-400" />
             </div>
