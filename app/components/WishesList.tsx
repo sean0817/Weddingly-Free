@@ -70,16 +70,6 @@ const WishesList = () => {
         ) : (
           wishes.map((wish) => (
             <div key={wish._id} className="mb-4">
-              <p className="font-bold font-legan">{wish.name}</p>
-              <p className="text-sm my-2 opacity-50">
-                {new Date(wish.createdAt).toLocaleString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                  hour: "numeric",
-                  minute: "numeric",
-                })}
-              </p>
               <p className="text-sm">{wish.message}</p>
               <hr className="my-2 border-gray-400" />
             </div>
